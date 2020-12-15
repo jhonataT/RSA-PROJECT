@@ -41,7 +41,7 @@ def exp_mod_rap(list_int_pow, d, mod, exp, r): #funcao de exponenciacao modular 
             if exp in list_int_pow: #checagem para ver se o expoente esta na decomposicao do numero binario
                 return r * exp_mod_rap(list_int_pow, d, mod, (exp*2), r) #retornando a mutiplicacao dos fators
 
-        else: #atribuicao feita a r a partir do segundo caso em diante
+        else: #atribuicao feita a 'r' a partir do segundo caso em diante
             r = (r*r) % mod 
             if exp in list_int_pow: #checagem para ver se o expoente esta na decomposicao do numero binario
                 return r * exp_mod_rap( list_int_pow, d, mod, (exp*2), r) #retornando ja a multiplicacao dos fatores
