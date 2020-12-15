@@ -302,7 +302,7 @@ def encript():
         # EMPACOTA LABEL INFORMATIVA 
         lb3.pack(side = TOP, pady = 50)
 #########################################################################################################################################
-###---------- COMEÇO DA GUI ----------###
+###---------- INICIO DA GUI ----------###
 # FUNÇÃO QUE LEVA PARA A ABA CRIPTOGRAFAR
 def prosseguir():
     e1.forget()                                           #FORGET() TIRA DA TELA A ENTRADA DO VALOR DE 'P'
