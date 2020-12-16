@@ -160,9 +160,7 @@ def encrypt():
 <p><strong>
     ➥ Para encriptar a mensagem, usamos a função 'encrypt()' com o seguinte algoritmo:
       <p>I. Recebemos 'n', 'e' e a 'mensagem' do usuário, convertendo o conteúdo da 'mensagem' para minúsculo;</p>
-      <p>II. Usando a chave pública do destinatário 'n' e 'e' fazemos uma potenciação modular: m^e ≡ c (mod n).
-
-</p>
+      <p>II. Usando a chave pública do destinatário 'n' e 'e' fazemos uma potenciação modular: m^e ≡ c (mod n).</p>
  </strong></p>
  
  <br/>
@@ -205,4 +203,13 @@ def decrypt():
         
         desc = desc + dic2[y%n]                       # CONCATENANDO A MENSAGEM COM O CARACTER DESCRIPTOGRAFADO.
 ```
-
+<p><strong>
+    ➥ Para desencriptar a mensagem, usamos a função 'decrypt()' com o seguinte algoritmo:
+      <p>I. Recebemos 'e', 'p' e 'q' do usuário (chaves privadas);</p>
+      <p>II. Achamos o inverso multiplicativo de 'e', fundamental para a descriptografia;</p>
+      <p>III. Atribuimos o conteúdo do arquivo CRIPTOGRAFADO a uma string;</p>
+      <p>IV. Separamos cada letra da mensagem em uma lista;</p>
+      <p>V. Convertemos o expoente 'd' em binário para poder iniciar a exponenciação;</p>
+      <p>VI. Armazenamos em uma lista a decomposição do expoente em potências de base 2;</p>
+      <p>VI. E, por último, executamos a exponênciacao modular rápida com o expoente 'd'.</p>
+ </strong></p>
