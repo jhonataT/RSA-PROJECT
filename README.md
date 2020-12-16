@@ -36,11 +36,6 @@ Tópicos deste projeto:
   </p>
 </a>
 
-<a href="#Sobre">
-  <h1>Como usar:</h1>
-  <p><strong>Esolha entre três opções:</strong></p>
-</a>
-
 <p>(1.0) Abra o seu terminal e digite:</p>
 
 ```cmd
@@ -58,7 +53,7 @@ Tópicos deste projeto:
 > python3 script-gui.py
 ```
 
-<a href="#como-usar">
+<a href="#Sobre">
   <h1>Como usar:</h1>
   <p><strong>Esolha entre três opções:</strong></p>
 </a>
