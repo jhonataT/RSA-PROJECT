@@ -76,7 +76,7 @@ Tópicos deste projeto:
 <br/>
 
 <a href="#encriptando">
-  <h1><strong>Encriptando a mensagem:</strong></h1>
+  <h1><strong>Encriptando:</strong></h1>
   <img src="https://user-images.githubusercontent.com/51134324/102371188-afb11c00-3f9c-11eb-9933-b689f0b57bc8.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102371458-f868d500-3f9c-11eb-8d49-4493f2ba7256.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102370945-6eb90780-3f9c-11eb-949f-ba55df902502.PNG" />
