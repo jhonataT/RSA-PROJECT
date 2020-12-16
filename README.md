@@ -160,9 +160,9 @@ def encrypt():
 <p><strong>
     ➥ Para encriptar a mensagem, usamos a função 'encrypt()' com o seguinte algoritmo:
       <p>I. Recebemos 'n', 'e' e a 'mensagem' do usuário, convertendo o conteúdo da 'mensagem' para minúsculo;</p>
-      <p>II. Usando a chave pública do destinatário 'n' e 'e' basta fazer uma potenciação modular: m^e ≡ c (mod n).
+      <p>II. Usando a chave pública do destinatário 'n' e 'e' fazemos uma potenciação modular: m^e ≡ c (mod n).
 
-;</p>
+</p>
  </strong></p>
 
 <p><strong>Encriptar:</strong></p>
