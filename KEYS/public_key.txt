@@ -1,2 +1,0 @@
-Valores da chave publica:
-n = 14736284533777754567 e = 1759272677
