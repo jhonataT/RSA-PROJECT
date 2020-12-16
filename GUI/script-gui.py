@@ -391,7 +391,7 @@ scroll.pack(side = TOP, padx = 10, pady = 7)                                   #
 btn5.pack(side = BOTTOM, padx = 10, pady = 2)                                       #EMPACOTAMENTO DO BOTÃO CRIPTOGRAFAR
 frame_top_cript.pack(side = TOP, expand = 1)                                    #EMPACOTAMENTO DO FRAME SUPERIOR
 frame_bottom_cript.pack(side = BOTTOM, expand = 1)                              #EMPACOTAMENTO DO FRAME INFERIOR
-lb3 = Label(frame_top_cript, text = "Sua mensagem já foi criptografada e o\narquivo encrypted.txt foi gerado no diretório onde\nestá este executável.")  #LABEL INFORMATIVA
+lb3 = Label(frame_top_cript, text = "Sua mensagem já foi criptografada e o\narquivo encrypted.txt foi gerado no diretório\n'RSA-PROJECT/encrypt&DecryptFiles/'.")  #LABEL INFORMATIVA
 
 ## ABA DESCRIPTOGRAFAR
 # FRAMES E WIDGETS
