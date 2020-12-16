@@ -21,7 +21,7 @@ Tópicos deste projeto:
   <h1>Sobre:</h1>
   <p><strong>Alunos: Jhonata Tenório e Jorge Lucas.</strong></p>
   <p>Projeto de Criptografia RSA para a nota final da disciplina de Matemárica Discreta, Universidade Federal de Alagoas.</p>
-  <p><strong>O Método RSA</strong></p>
+  <p><strong>O Método RSA:</strong></p>
   <p>
     RSA <strong>(Rivest-Shamir-Adleman)</strong> é um dos primeiros sistemas de criptografia de chave pública e é 
     amplamente utilizado para transmissão segura de dados. Neste sistema de criptografia, a chave
