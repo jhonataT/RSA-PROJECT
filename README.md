@@ -12,8 +12,8 @@
 Tópicos deste projeto:
 =================
 <!--ts-->
-   * [Sobre o projeto ](#sobre)
-   * [Instalação ](#instalar)
+   * [Sobre o projeto](#sobre)
+   * [Instalação](#instalando)
    * [Como usar](#como-usar)
 <!--te-->
 
@@ -29,7 +29,7 @@ Tópicos deste projeto:
   </p>
 </a>
 
-<a href="#instalar">
+<a href="#instalando">
   <h1>Como instalar:</h1>
   <p><strong> Instale o <a href="https://git-scm.com/downloads">GIT</a>  e o <a href="https://www.python.org/downloads/">PYTHON3.</a></strong></p>
 </a>
