@@ -60,7 +60,7 @@ Tópicos deste projeto:
 
 
 <!--ts-->
-   * [Gerar chave pública](#Public-Key)
+   * [Gerar chave pública](#sobre-projeto)
    * [Encriptar](#encrypt)
    * [Desencriptar](#decrypt)
 <!--te-->
