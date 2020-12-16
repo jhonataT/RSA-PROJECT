@@ -254,7 +254,7 @@ def decrypt():
     d = inversom_m(e, tot_n)                          # INVERSO MULTIPLICATIVO DE 'e', FUNDAMENTAL PARA A DESCRIPTOGRAFIA.
 
     #manipulação do arquivo de entrada
-    arquivo_cript = open("encrypted.txt", "r")        # ABRINDO O ARQUIVO CRIPTOGRAFADO INDICADO PELO USUARIO.
+    arquivo_cript = open("../encrypt&decryptFiles/encrypted.txt", "r")        # ABRINDO O ARQUIVO CRIPTOGRAFADO INDICADO PELO USUARIO.
     mensagem = arquivo_cript.read()                   # ATRIBUINDO O CONTEUDO DO ARQUIVO CRIPTOGRAFADO A UMA STRING.
 
     lista = mensagem.split(" ")                       # SEPARANDO CADA LETRA CRIPTOGRAFADA E AS SALVANDO COMO ELEMENTO DE UMA LISTA.
@@ -279,7 +279,8 @@ def decrypt():
 
     #manipulacao do arquivo de saida
     desc = desc.upper()                               # DEIXANDO TODOS AS LETRAS DA MENSAGEM EM CAIXA ALTA.
-    arquivo_descript = open("decrypted.txt", "w")     # CRIANDO ARQUIVO .txt PARA RECEBER MENSAGEM DESCRIPTOGRAFADA.
+
+    arquivo_descript = open("../encrypt&decryptFiles/decrypted.txt", "w")     # CRIANDO ARQUIVO .txt PARA RECEBER MENSAGEM DESCRIPTOGRAFADA.
     arquivo_descript.write(desc)                      # ESCREVENDO MENSAGEM DESCRIPTOGRAFADA NO ARQUIVO.
     arquivo_descript.close()                          # FECHANDO O ARQUIVO.
 
@@ -323,7 +324,7 @@ def encrypt():
     if error == -1:
         messagebox.showerror("Erro", "Caractere inválido.\nApenas letras sem acentos e sem pontuações.") # BOX DE ERRO PARA CARACTERES INVÁLIDOS
     else:
-        arquivo = open("encrypted.txt", "w")                   # GERANDO ARQUIVO .txt QUE GUARDARÁ O TEXTO CRIPTOGRAFADO
+        arquivo = open("../encrypt&decryptFiles/encrypted.txt", "w")             # GERANDO ARQUIVO .txt QUE GUARDARÁ O TEXTO CRIPTOGRAFADO
         arquivo.write(criptografado)                           # ESCREVENDO A MENSAGEM CRIPTOGRAFADA NO ARQUIVO.
         arquivo.close()                                        # FECHANDO O ARQUIVO.
 
