@@ -12,14 +12,14 @@
 Tópicos deste projeto:
 =================
 <!--ts-->
-   * [Sobre o projeto](#sobre)
+   * [Sobre o projeto](#sobre-projeto)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
 <!--te-->
 
-<a href="sobre"> 
+<a href="#sobre-projeto"> 
   
 <h1>Sobre este projeto:</h1>
   <p><strong>Alunos: Jhonata Tenório e Jorge Lucas.</strong></p>
