@@ -12,14 +12,13 @@
 Tópicos deste projeto:
 =================
 <!--ts-->
-   * [Sobre o projeto](#sobre-projeto)
-   * [Instalação](#instalacao)
+   * [Sobre o projeto ](#sobre)
+   * [Instalação ](#instalar)
    * [Como usar](#como-usar)
 <!--te-->
 
-<a href="#sobre-projeto"> 
-  
-<h1>Sobre este projeto:</h1>
+<a href="#sobre"> 
+  <h1>Sobre este projeto:</h1>
   <p><strong>Alunos: Jhonata Tenório e Jorge Lucas.</strong></p>
   <p>Projeto de Criptografia RSA para a nota final da disciplina de Matemárica Discreta, Universidade Federal de Alagoas.</p>
   <p>Mas afinal, o que é Criptografia RSA?</p>
@@ -28,10 +27,9 @@ Tópicos deste projeto:
     amplamente utilizado para transmissão segura de dados. Neste sistema de criptografia, a chave
     de encriptação é pública e é diferente da chave de decriptação que é secreta (privada).
   </p>
-  
 </a>
 
-<a href="#instalacao">
+<a href="#instalar">
   <h1>Como instalar:</h1>
   <p><strong>Instale o <a href="https://git-scm.com/downloads">GIT</a>  e o <a href="https://www.python.org/downloads/">PYTHON3.</a></strong></p>
 </a>
@@ -60,7 +58,7 @@ Tópicos deste projeto:
 
 
 <!--ts-->
-   * [Gerar chave pública](#sobre-projeto)
+   * [Gerar chave pública](#publicKey)
    * [Encriptar](#encrypt)
    * [Desencriptar](#decrypt)
 <!--te-->
