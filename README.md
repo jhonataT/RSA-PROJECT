@@ -119,9 +119,9 @@ def generate_key():
 ```
 <p><strong>
     ➥ Para gerar as chaves, usamos a função 'generate_key()' com o seguinte algoritmo:
-      <p>I. Usando a função: 'gen_prime()', Geramos dois primos de 32 bits ('p' e 'q');</p>
+      <p>I. Usando a função: 'gen_prime()', geramos dois primos de 32 bits ('p' e 'q');</p>
       <p>II. Com 'p' e 'q', temos 'n' ('n' = 'p' * 'q');</p>
-      <p>III. Com a função: 'phi(p, q)', Calculamos a função totiente de Euler [ϕ(n) = (p - 1)(q - 1)];</p>
+      <p>III. Com a função: 'phi(p, q)', calculamos a função totiente de Euler [ϕ(n) = (p - 1)(q - 1)];</p>
       <p>IV. Por último, iremos usar a função 'co_primos(tot_n) para achar um inteiro 'e' tal que 1 < 'e' < 'ϕ(n)', de forma que 'e' e 'ϕ(n)' sejam co-primos;</p>
   
  
