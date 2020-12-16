@@ -17,8 +17,8 @@ Tópicos deste projeto:
    * [Como usar](#como-usar)
 <!--te-->
 
-<a href="#como-usar"> 
-  <h1>Sobre este projeto:</h1>
+<a href="#Sobre"> 
+  <h1>Sobre:</h1>
   <p><strong>Alunos: Jhonata Tenório e Jorge Lucas.</strong></p>
   <p>Projeto de Criptografia RSA para a nota final da disciplina de Matemárica Discreta, Universidade Federal de Alagoas.</p>
   <p>Mas afinal, o que é Criptografia RSA?</p>
@@ -53,7 +53,7 @@ Tópicos deste projeto:
 > python3 script-gui.py
 ```
 
-<a href="#Sobre">
+<a href="#como-usar">
   <h1>Como usar:</h1>
   <p><strong>Esolha entre três opções:</strong></p>
 </a>
