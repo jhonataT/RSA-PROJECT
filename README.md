@@ -211,5 +211,5 @@ def decrypt():
       <p>IV. Separamos cada letra da mensagem em uma lista;</p>
       <p>V. Convertemos o expoente 'd' em binário para poder iniciar a exponenciação;</p>
       <p>VI. Armazenamos em uma lista a decomposição do expoente em potências de base 2;</p>
-      <p>VI. E, por último, executamos a exponênciacao modular rápida com o expoente 'd'.</p>
+      <p>VII. E, por último, executamos a exponênciacao modular rápida com o expoente 'd'.</p>
  </strong></p>
