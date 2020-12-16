@@ -361,7 +361,7 @@ tab_control.pack(expand=1, fill= BOTH)              #EMPACOTAMENTO DAS ABAS
 frame_top_key = Frame(key)
 frame_top_key1 = Frame(key)                                                          #FRAME SUPERIOR DA ABA
 frame_bottom_key = Frame(key)                                                       #FRAME INFERIOR DA ABA
-lb1 = Label(frame_top_key1, text = "Suas chaves foram validadas!\n\nOs arquivos private_key.txt e public_key.txt\nforam criados no diretório onde está esse executável.\nProssiga com a criptografia da sua mensagem\nclicando abaixo.") #LABEL INFORMATIVA
+lb1 = Label(frame_top_key1, text = "Suas chaves foram validadas!\n\nOs arquivos private_key.txt e public_key.txt\nforam criados no diretório 'KEYS'.\nProssiga com a criptografia da sua mensagem\nclicando abaixo.") #LABEL INFORMATIVA
 btn1 = Button(frame_top_key1, text="Gerar Chaves", command = generate_key, height = 1, width = 14)         #BOTÃO GERAR CHAVES
 btn2 = Button(frame_top_key1, text="Inserir Chaves", command = insert_key, height = 1, width = 14)        #BOTÃO INSERIR CHAVES
 lb5 = Label(frame_top_key, text = "Digite os valores de p, q e de um co-primo\na esses dois números, nessa ordem.\n*p e q devem ser diferentes e maiores que 3*") #LABEL DE INSTRUÇÃO
