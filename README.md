@@ -17,6 +17,7 @@ Tópicos deste projeto:
    * [Como usar](#como-usar)
 <!--te-->
 
+
 <a href="#sobre"> 
   <h1>Sobre este projeto:</h1>
   <p><strong>Alunos: Jhonata Tenório e Jorge Lucas.</strong></p>
@@ -27,6 +28,11 @@ Tópicos deste projeto:
     amplamente utilizado para transmissão segura de dados. Neste sistema de criptografia, a chave
     de encriptação é pública e é diferente da chave de decriptação que é secreta (privada).
   </p>
+</a>
+
+<a href="#como-usar">
+  <h1>Como usar:</h1>
+  <p><strong>Esolha entre três opções:</strong></p>
 </a>
 
 <a href="#instalando">
@@ -51,10 +57,7 @@ Tópicos deste projeto:
 > python3 script-gui.py
 ```
 
-<a href="#como-usar">
-  <h1>Como usar:</h1>
-  <p><strong>Esolha entre três opções:</strong></p>
-</a>
+
 
 
 <!--ts-->
