@@ -122,9 +122,47 @@ def generate_key():
       <p>I. Usando a função: 'gen_prime()', geramos dois primos de 32 bits ('p' e 'q');</p>
       <p>II. Com 'p' e 'q', temos 'n' ('n' = 'p' * 'q');</p>
       <p>III. Com a função: 'phi(p, q)', calculamos a função totiente de Euler [ϕ(n) = (p - 1)(q - 1)];</p>
-      <p>IV. Por último, iremos usar a função 'co_primos(tot_n) para achar um inteiro 'e' tal que 1 < 'e' < 'ϕ(n)', de forma que 'e' e 'ϕ(n)' sejam co-primos;</p>
-  
- 
- 
+      <p>IV. Por último, iremos usar a função 'co_primos(tot_n) para achar um inteiro 'e' tal que 1 < 'e' < 'ϕ(n)', de forma que 'e' e 'ϕ(n)' sejam co-primos.</p>
  </strong></p>
 
+
+<br/>
+<p><strong>Encriptar:</strong></p>
+
+```python
+def encrypt():
+    n = int(e7.get())                                  # PEGANDO O VALOR DE 'n' DA ENTRADA E CONVERTENDO PARA INTEIRO.
+    e = int(e8.get())                                  # PEGANDO O VALOR DE 'e' DA ENTRADA E CONVERTENDO PARA INTEIRO.
+    mensagem  = scroll.get('1.0', END)                 # CAPTURANDO O TEXTO DIGITADO NA SCROLLEDTEXT.
+    mensagem = mensagem.lower()                        # DEIXANDO AS LETRAS DA STRING EM MINUSCULO PARA NAO CONFLITAR COM OS DICIONARIOS.
+    
+    i = 0                                              # INTEIRO QUE REPRESENTA A POSICAO DA LETRA NA STRING.
+    error = 0                                          # INTEIRO AUXILIAR PARA TRATAMENTO DE ERRO.
+    criptografado = ""                                 # STRING INICIALMENTE VAZIA QUE GUARDA A MENSAGEM CRIPTOGRAFADA.
+    while i < int(len(mensagem) - 1):
+        list_int_pow = []                              # LISTA AUXILIAR GUARDA A DECOMPOSICAO EM BASE 2 DO EXPOENTE.
+        
+        try :
+            x = dic1[mensagem[i]]
+        except :
+            error = -1
+            break
+        x = dic1[mensagem[i]]                          # VALOR DE DETERMINADO CARACTER ATRIBUIDO DE ACORDO COM O DICIONARIO.
+        convert = int_bin(e, "")                       # CONVERTENDO O VALOR DE E (O EXPOENTE DA POTENCIACAO) EM BINARIO.
+        generate_list_int(convert, list_int_pow)       # ARMAZENANDO EM "LIST_INT POW" OS VALORES NA BASE 2  QUE DECOMPOEM O VALOR 'e'.
+
+        y = exp_mod_rap(list_int_pow, x, n, 1, 0)      # EXPONENCIACAO MODULAR RAPIDA PARA CRIPTOGRAFAR A MENSAGEM.
+            
+        criptografado = criptografado + str(y%n) +" "  # CONCATENANDO A LETRA CRIPTOGRAFADA NA STRING.
+        i += 1
+```
+
+<p><strong>
+    ➥ Para encriptar a mensagem, usamos a função 'encrypt()' com o seguinte algoritmo:
+      <p>I. Recebemos 'n', 'e' e a 'mensagem' do usuário, convertendo o conteúdo da 'mensagem' para minúsculo;</p>
+      <p>II. Usando a chave pública do destinatário 'n' e 'e' basta fazer uma potenciação modular: m^e ≡ c (mod n).
+
+;</p>
+ </strong></p>
+
+<p><strong>Encriptar:</strong></p>
