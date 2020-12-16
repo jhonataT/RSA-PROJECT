@@ -30,14 +30,13 @@ Tópicos deste projeto:
   </p>
 </a>
 
+<a href="#instalando">
+  <h1>Como instalar:</h1>
+</a>
+
 <a href="#como-usar">
   <h1>Como usar:</h1>
   <p><strong>Esolha entre três opções:</strong></p>
-</a>
-
-<a href="#instalando">
-  <h1>Como instalar:</h1>
-  <p><strong> Instale o <a href="https://git-scm.com/downloads">GIT</a>  e o <a href="https://www.python.org/downloads/">PYTHON3.</a></strong></p>
 </a>
 
 <p>(1.0) Abra o seu terminal e digite:</p>
@@ -57,8 +56,10 @@ Tópicos deste projeto:
 > python3 script-gui.py
 ```
 
-
-
+<a href="#como-usar">
+  <h1>Como usar:</h1>
+  <p><strong>Esolha entre três opções:</strong></p>
+</a>
 
 <!--ts-->
    * [Gerar chave pública](#publicKey)
