@@ -404,7 +404,7 @@ lb4.pack(side = TOP, pady = 5)        #EMPACOTAMENTO DA LABEL DE INSTRUÇÃO
 e3.pack(side = TOP, pady = 20)        #EMPACOTAMENTO DA ENTRADA DE 'e'
 e4.pack(side = TOP, pady = 20)        #EMPACOTAMENTO DA ENTRADA DE 'p'
 e5.pack(side = TOP, pady = 20)        #EMPACOTAMENTO DA ENTRADA DE 'q'
-lb6 = Label(frame_dcript, text = "Seu arquivo foi descriptografado e está no diretório\ndeste executável como decrypted.txt") #LABEL INFORMATIVA DE QUE O ARQUIVO FOI GERADO
+lb6 = Label(frame_dcript, text = "Seu arquivo foi descriptografado e está no diretório\n'RSA-PROJECT/encrypt&DecryptFiles/decrypted.txt'") #LABEL INFORMATIVA DE QUE O ARQUIVO FOI GERADO
 btn7 = Button(frame_dcript, text="Descriptografar", command = decrypt)  #BOTÃO PARA DESCRIPTOGRAFAR O ARQUIVO
 btn7.pack(side = BOTTOM, pady = 10)   #EMPACOTAMENTO DO BOTÃO DESCRIPTOGRAFAR
 frame_dcript.pack()                   #EMPACOTAMENTO DO FRAME PRINCIPAL DA ABA
