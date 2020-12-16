@@ -12,14 +12,14 @@
 Tópicos deste projeto:
 =================
 <!--ts-->
-   * [Sobre o projeto](#Sobre)
+   * [Sobre o projeto](#sobre)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
 <!--te-->
 
-<a href="#Sobre"> 
+<a href="#sobre"> 
   
 <h1>Sobre este projeto:</h1>
   <p>Projeto de Criptografia RSA para a nota final da disciplina de Matemárica Discreta, Universidade Federal de Alagoas.</p>
