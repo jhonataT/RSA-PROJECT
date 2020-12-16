@@ -15,6 +15,7 @@ Tópicos deste projeto:
    * [Sobre o projeto](#Sobre)
    * [Instalação](#instalando)
    * [Como usar](#como-usar)
+   * [Funcionalidades](#Funcionalidades)
 <!--te-->
 
 <a href="#Sobre"> 
@@ -67,7 +68,7 @@ Tópicos deste projeto:
 <br/>
 
 <a href="#gerando-chaves">
-  <h1><strong>Gerando chaves:</strong></h1>
+  <h2><strong>Gerando chaves:</strong></h2>
   <img src="https://user-images.githubusercontent.com/51134324/102367172-357e9880-3f98-11eb-9000-4ffd81355472.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102369641-ef770400-3f9a-11eb-9e87-f629c44059f1.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102369161-652ea000-3f9a-11eb-972f-32c2978886bc.PNG" />
@@ -76,7 +77,7 @@ Tópicos deste projeto:
 <br/>
 
 <a href="#encriptando">
-  <h1><strong>Encriptando:</strong></h1>
+  <h2><strong>Encriptando:</strong></h2>
   <img src="https://user-images.githubusercontent.com/51134324/102373274-c9536300-3f9e-11eb-907a-ed84b89ddbb5.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102373914-77f7a380-3f9f-11eb-871a-1d43f677204d.PNG" />
   <br/>
@@ -86,7 +87,7 @@ Tópicos deste projeto:
 </a>
 
 <a href="#desencriptando">
-  <h1><strong>Desencriptando:</strong></h1>
+  <h2><strong>Desencriptando:</strong></h2>
   <img src="https://user-images.githubusercontent.com/51134324/102392479-de87bc00-3fb5-11eb-809a-7bc92dbc1bad.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102392892-6e2d6a80-3fb6-11eb-9350-f6390f4afac3.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102393064-a46aea00-3fb6-11eb-9a29-cd4da932b058.PNG" />
@@ -94,3 +95,34 @@ Tópicos deste projeto:
   <img src="https://user-images.githubusercontent.com/51134324/102399958-07ad4a00-3fc0-11eb-8283-fca38e7e31a2.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102393314-f1e75700-3fb6-11eb-91f0-cf401353547d.PNG" />
 </a>
+
+<br/>
+
+<a href="#Funcionalidades">
+  <h1><strong>Funcionalidades:</strong></h1>
+  <p><strong>Gerar chaves:</strong></p>
+</a>
+
+```python
+
+def generate_key():
+    p = gen_prime()
+    q = gen_prime()
+    
+    while p == q:
+        q = gen_prime()
+        
+    n = p*q
+    tot_n = phi(p, q)
+    e = co_primos(tot_n)
+    
+```
+<p><strong>
+    ➥ Para gerar as chaves, usamos a função 'generate_key()' com o seguinte algoritmo:
+      <p>I. Geramos dois primos de 32 bits ('p' e 'q'),</p>
+      <p>II. com 'p' e 'q', temos 'n' ('n' = 'p' * 'q'),</p>
+  
+ 
+ 
+ </strong></p>
+
