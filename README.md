@@ -32,7 +32,7 @@ Tópicos deste projeto:
 <a href="#instalando">
   <h1>Instalando:</h1>
   <p> 
-    <strong>Instale o <a href="https://git-scm.com/downloads">GIT</a>  e o <a href="https://www.python.org/downloads/">PYTHON3.</a></strong> 
+    <strong>Instale o <a href="https://git-scm.com/downloads"> GIT </a>  e o <a href="https://www.python.org/downloads/">PYTHON3.</a></strong> 
   </p>
 </a>
 
@@ -59,7 +59,7 @@ Tópicos deste projeto:
 </a>
 
 <!--ts-->
-   * [Gerar chaves](#gerando-chaves)
+   * [Gerar chaves](#Gerando-chaves)
    * [Encriptar](#encriptando)
    * [Desencriptar](#decriptando)
 <!--te-->
