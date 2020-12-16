@@ -164,5 +164,45 @@ def encrypt():
 
 </p>
  </strong></p>
+ 
+ <br/>
 
-<p><strong>Encriptar:</strong></p>
+<p><strong>Desencriptar:</strong></p>
+
+```python
+def decrypt():
+    # ENTRADAS DO USUARIO:
+    e = int(e3.get())                # PEGANDO O VALOR DE 'e' E CONVERTENDO PARA INTEIRO;
+    p = int(e4.get())                # PEGANDO O VALOR DE 'p'' E CONVERTENDO PARA INTEIRO;
+    q = int(e5.get())                # PEGANDO O VALOR DE 'q' E CONVERTENDO PARA INTEIRO.
+
+    # CALCULO DOS VALORES NECESSARIOS:
+    n = p * q
+    tot_n = ((p-1) * (q-1))
+    d = inversom_m(e, tot_n)                          # INVERSO MULTIPLICATIVO DE 'e', FUNDAMENTAL PARA A DESCRIPTOGRAFIA.
+
+    #manipulação do arquivo de entrada
+    arquivo_cript = open("../encrypt&decryptFiles/encrypted.txt", "r")        # ABRINDO O ARQUIVO CRIPTOGRAFADO INDICADO PELO USUARIO.
+    mensagem = arquivo_cript.read()                   # ATRIBUINDO O CONTEUDO DO ARQUIVO CRIPTOGRAFADO A UMA STRING.
+
+    lista = mensagem.split(" ")                       # SEPARANDO CADA LETRA CRIPTOGRAFADA E AS SALVANDO COMO ELEMENTO DE UMA LISTA.
+    
+    arquivo_cript.close()                             # FECHANDO O ARQUIVO DE ENTRADA.
+
+    #processo de descriptografia
+    desc = ""                                         # STRING VAZIA QUE VAI ARMAZENAR A MENSAGEM DESCRIPTOGRAFADA.
+
+    for item in lista:
+        #objetos auxiliares
+        list_int_pow = []                             # LISTA AUXILIAR QUE GUARDA DECOMPOSICAO DE BASE 2 DO EXPOENTE
+        if item == '':                                # CONDICAO PRA NAO BUGAR NO ULTIMO ITEM DA LISTA QUE SEMPRE VAI SER VAZIO
+            break
+        x = int(item)                                 # ATRIBUI A X O INTEIRO DA LISTA QUE VAI SER DESCRIPTOGRAFADO EM UM CARACTER
+        #r = (x**d) % n
+        convert = int_bin(d, "")                      # CONVERTENDO EXPOENTE 'd' EM BINARIO PARA PODER INICIAR A EXPONENCIAÇÃO;
+        generate_list_int(convert, list_int_pow)      # ARMAZENANDO EM UMA LISTA A DECOMPOSIÇÃO DO EXPOENTE EM POTENCIAS DE BASE 2;
+        y = exp_mod_rap(list_int_pow, x, n, 1, 0)     # EXECUTANDO A EXPONENCIACAO MODULAR RAPIDA COM O EXPOENTE 'd'.
+        
+        desc = desc + dic2[y%n]                       # CONCATENANDO A MENSAGEM COM O CARACTER DESCRIPTOGRAFADO.
+```
+
