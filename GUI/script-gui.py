@@ -26,7 +26,7 @@ dic2 = {2 : "a", 3 : "b", 4 : "c", 5 : "d", 6 : "e" , 7 : "f" , 8 : "g", 9 : "h"
 
 # FUNCOES MATEMATICAS (SEM INTERAÇÃO DO USUÁRIO):
 
-# FUNCOES DEPENDENTES DA decript() e encript():
+# FUNCOES DEPENDENTES DA decrypt() e encrypt():
 #########################################################################################################################################
 def invert(a, b):                                                        # INVERSO MULTIPLICATIVO:
     if a == 0:
@@ -137,10 +137,13 @@ def generate_key():
     e = co_primos(tot_n)
 
     # REMOVE TODOS WIDGETS DA ABA 'GERAR CHAVES':
-    frame_tleft_key.forget()
-    frame_tright_key.forget()
+    
+    # frame_top_key1.forget()
+    lb1.pack(side = BOTTOM, expand = 1)
     btn1.forget()
     btn2.forget()
+    lb1.pack(side = TOP, expand = 1)
+    btn3.pack(side = BOTTOM, expand = 1, pady = 30)
     # CRIA OS ARQUIVOS 'PUBLIC_KEY.TXT' E 'PRIVATE_KEY.TXT'.
     create_archive(n, e, p, q)
 #########################################################################################################################################
@@ -152,8 +155,13 @@ def create_archive(n, e, p, q):
     e6.forget()
     btn4.forget()
     # EMPACOTA A LABEL INFORMATIVA E O BOTÃO PROSSEGUIR:
-    lb1.pack(side = TOP, expand = 1, pady = 40, fill = BOTH)
+    
+    frame_top_key1.pack(side = TOP, expand = 1)
+    frame_top_key.forget()
+
+    lb1.pack(side = TOP, expand = 1)
     btn3.pack(side = BOTTOM, expand = 1, pady = 30)
+    btn8.pack(side = TOP)
     
     chave_publica = ("Valores da chave publica:\nn = %d e = %d\n" %(n,e))
     chave_privada = ("Valores da chave privada:\ne = %d n = %d p = %d q = %d\n" %(e, n, p, q))
@@ -167,7 +175,7 @@ def create_archive(n, e, p, q):
 # BOTÃO 'VALIDAR':
 def validate_prime():
     # RECEBE OS VALORES INSERIDOS PELO USUÁRIO E CONVERTE PARA INTEIRO.
-    p = int(e1.get())    
+    p = int(e1.get())  
     q = int(e2.get())
     e = int(e6.get())
     
@@ -196,11 +204,25 @@ def validate_prime():
     if(test_prime(p) != False and test_prime(q) != False and euclides(tot_n, e) == 1):
         create_archive(n, e, p, q)
 #########################################################################################################################################
+## BOTÃO 'HOME':
+def new_key():
+    lb1.forget()
+    btn8.forget()
+    btn3.forget()
+
+    btn1.pack(side = TOP, padx = 10, pady = 6 , expand=1)                       #EMPACOTAMENTO DO BOTÃO GERAR CHAVES
+    btn2.pack(side = TOP, padx = 10, pady = 6, expand=1)                        #EMPACOTAMENTO DO BOTÃO INSERIR CHAVES
+
+    
+
+#########################################################################################################################################
 ## BOTÃO 'INSERIR CHAVES':
 def insert_key():
     # RETIRA OS BOTÕES DA TELA DE ESCOLHA NA ABA 'GERAR CHAVES'.
-    frame_tleft_key.forget()
-    frame_tright_key.forget()
+    frame_top_key.pack(side = TOP, expand = 1)      # EMPACOTAMENTO DO FRAME SUPERIOR.
+    frame_top_key1.forget() 
+    btn1.forget()
+    btn2.forget()
     
     lb5.pack(side = TOP)                            # EMPACOTAMENTO DA LABEL DE INSTRUÇÃO;
     e1.pack(side = TOP, expand = 1, pady = 10)      # EMPACOTAMENTO DA ENTRADE DE 'p';
@@ -209,7 +231,7 @@ def insert_key():
     e1.focus()                                      # DÁ FOCO NA ENTRADA DE 'p';
     btn4.pack(side = BOTTOM, pady = 10)             # EMPACOTAMENTO DO BOTÃO VALIDAR.
 #########################################################################################################################################
-def decript():
+def decrypt():
     # ENTRADAS DO USUARIO:
     e = int(e3.get())                # PEGANDO O VALOR DE 'e' E CONVERTENDO PARA INTEIRO;
     p = int(e4.get())                # PEGANDO O VALOR DE 'p' E CONVERTENDO PARA INTEIRO;
@@ -221,7 +243,7 @@ def decript():
     d = inversom_m(e, tot_n)                          # INVERSO MULTIPLICATIVO DE 'e', FUNDAMENTAL PARA A DESCRIPTOGRAFIA.
 
     #manipulação do arquivo de entrada
-    arquivo_cript = open("../encript&decriptFiles/encripted.txt", "r")        # ABRINDO O ARQUIVO CRIPTOGRAFADO INDICADO PELO USUARIO.
+    arquivo_cript = open("../encrypt&decryptFiles/encrypted.txt", "r")        # ABRINDO O ARQUIVO CRIPTOGRAFADO INDICADO PELO USUARIO.
     mensagem = arquivo_cript.read()                   # ATRIBUINDO O CONTEUDO DO ARQUIVO CRIPTOGRAFADO A UMA STRING.
 
     lista = mensagem.split(" ")                       # SEPARANDO CADA LETRA CRIPTOGRAFADA E AS SALVANDO COMO ELEMENTO DE UMA LISTA.
@@ -246,7 +268,7 @@ def decript():
 
     #manipulacao do arquivo de saida
     desc = desc.upper()                               # DEIXANDO TODOS AS LETRAS DA MENSAGEM EM CAIXA ALTA.
-    arquivo_descript = open("../encript&decriptFiles/decripted.txt", "w")     # CRIANDO ARQUIVO .txt PARA RECEBER MENSAGEM DESCRIPTOGRAFADA.
+    arquivo_descript = open("../encrypt&decryptFiles/decrypted.txt", "w")     # CRIANDO ARQUIVO .txt PARA RECEBER MENSAGEM DESCRIPTOGRAFADA.
     arquivo_descript.write(desc)                      # ESCREVENDO MENSAGEM DESCRIPTOGRAFADA NO ARQUIVO.
     arquivo_descript.close()                          # FECHANDO O ARQUIVO.
 
@@ -259,10 +281,10 @@ def decript():
     # EMPACOTA A LABEL INFORMATIVA.
     lb6.pack(side = TOP, pady = 70)
 #########################################################################################################################################
-def encript():
+def encrypt():
     # ENTRADAS PROVIDAS PELO USUARIO:
     n = int(e7.get())                       # PEGANDO O VALOR DE 'n' DA ENTRADA E CONVERTENDO PARA INTEIRO.
-    e = int(e8.get())                       #PEGANDO O VALOR DE 'e' DA ENTRADA E CONVERTENDO PARA INTEIRO.
+    e = int(e8.get())                       # PEGANDO O VALOR DE 'e' DA ENTRADA E CONVERTENDO PARA INTEIRO.
     mensagem  = scroll.get('1.0', END)      # CAPTURANDO O TEXTO DIGITADO NA SCROLLEDTEXT.
     mensagem = mensagem.lower()                        # DEIXANDO AS LETRAS DA STRING EM MINUSCULO PARA NAO CONFLITAR COM OS DICIONARIOS.
     
@@ -290,7 +312,7 @@ def encript():
     if error == -1:
         messagebox.showerror("Erro", "Caractere inválido.\nNão use acentos nem pontuações.") # BOX DE ERRO PARA CARACTERES INVÁLIDOS
     else:
-        arquivo = open("../encript&decriptFiles/encripted.txt", "w")                   # GERANDO ARQUIVO .txt QUE GUARDARÁ O TEXTO CRIPTOGRAFADO
+        arquivo = open("../encrypt&decryptFiles/encrypted.txt", "w")                   # GERANDO ARQUIVO .txt QUE GUARDARÁ O TEXTO CRIPTOGRAFADO
         arquivo.write(criptografado)                           # ESCREVENDO A MENSAGEM CRIPTOGRAFADA NO ARQUIVO.
         arquivo.close()                                        # FECHANDO O ARQUIVO.
         #RETIRA TODOS WIDGETS DA ABA CRIPTOGRAFAR 
@@ -334,24 +356,22 @@ tab_control.pack(expand=1, fill= BOTH)              #EMPACOTAMENTO DAS ABAS
 
 ## ABA GERAR CHAVES
 # FRAMES E WIDGETS
-frame_top_key = Frame(key)                                                          #FRAME SUPERIOR DA ABA
+frame_top_key = Frame(key)
+frame_top_key1 = Frame(key)                                                          #FRAME SUPERIOR DA ABA
 frame_bottom_key = Frame(key)                                                       #FRAME INFERIOR DA ABA
-frame_tleft_key = Frame(frame_top_key)                                              #FRAME ESQUERDO DA ABA
-frame_tright_key = Frame(frame_top_key)                                             #FRAME DIREITO DA ABA
-btn1 = Button(frame_tleft_key, text="Gerar Chaves", command = generate_key)         #BOTÃO GERAR CHAVES
-btn2 = Button(frame_tright_key, text="Inserir Chaves", command = insert_key)        #BOTÃO INSERIR CHAVES
-lb1 = Label(frame_top_key, text = "Suas chaves foram validadas!\n\nOs arquivos private_key.txt e public_key.txt\nforam criados no diretório onde está esse executável.\nProssiga com a criptografia da sua mensagem\nclicando abaixo.") #LABEL INFORMATIVA
+lb1 = Label(frame_top_key1, text = "Suas chaves foram validadas!\n\nOs arquivos private_key.txt e public_key.txt\nforam criados no diretório onde está esse executável.\nProssiga com a criptografia da sua mensagem\nclicando abaixo.") #LABEL INFORMATIVA
+btn1 = Button(frame_top_key1, text="Gerar Chaves", command = generate_key, height = 1, width = 14)         #BOTÃO GERAR CHAVES
+btn2 = Button(frame_top_key1, text="Inserir Chaves", command = insert_key, height = 1, width = 14)        #BOTÃO INSERIR CHAVES
 lb5 = Label(frame_top_key, text = "Digite os valores de P, Q e de um co-primo\na esses dois números, nessa ordem.\n*P e Q devem ser diferentes*") #LABEL DE INSTRUÇÃO
 e1 = Entry(frame_top_key)                                                   #ENTRADA DO VALOR DE 'P'
 e2 = Entry(frame_top_key)                                                   #ENTRADA DO VALOR DE 'Q'
 e6 = Entry(frame_top_key)                                                   #ENTRADA DO VALOR DE 'E'
-btn3 = Button(frame_top_key, text="Prosseguir", command = prosseguir)       #BOTÃO PROSSEGUIR
-btn4 = Button(frame_top_key, text="Validar", command = validate_prime)      #BOTÃO VALIDAR
-frame_top_key.pack(side=TOP, expand=1)                                      #EMPACOTAMENTO DO FRAME SUPERIOR
-frame_tleft_key.pack(side=LEFT, expand=1)                                   #EMPACOTAMENTO DO FRAME ESQUERDO
-frame_tright_key.pack(side=RIGHT, expand=1)                                 #EMPACOTAMENTO DO FRAME DIREITO
-btn1.pack(side=LEFT, padx=10, pady = 3, expand=1)                           #EMPACOTAMENTO DO BOTÃO GERAR CHAVES
-btn2.pack(side=RIGHT, padx=10, pady = 3, expand=1)                          #EMPACOTAMENTO DO BOTÃO INSERIR CHAVES
+btn3 = Button(frame_top_key1, text = "Prosseguir", command = prosseguir)    #BOTAO PROSSEGUIR
+btn4 = Button(frame_top_key, text = "Validar", command = validate_prime)    #BOTAO VALIDAR
+btn8 = Button(frame_top_key1, text = "Nova Chave", command = new_key)       #BOTAO HOME
+frame_top_key1.pack(side = TOP, expand = 1)                                 #EMPACOTAMENTO DO FRAME SUPERIOR
+btn1.pack(side = TOP, padx = 10, pady = 6 , expand=1)                       #EMPACOTAMENTO DO BOTÃO GERAR CHAVES
+btn2.pack(side = TOP, padx = 10, pady = 6, expand=1)                        #EMPACOTAMENTO DO BOTÃO INSERIR CHAVES
 
 ## ABA CRIPTOGRAFAR
 # FRAMES E WIDGETS
@@ -363,13 +383,13 @@ e7 = Entry(frame_top_cript)                     #ENTRADA DO VALOR DE 'N'
 e8 = Entry(frame_top_cript)                     #ENTRADA DO VALOR DE 'E'
 e7.pack(side = TOP)                             #EMPACOTAMENTO DA ENTRADA DE 'N'
 e8.pack(side = TOP)                             #EMPACOTAMENTO DA ENTRADA DE 'E'
-scroll = scrolledtext.ScrolledText(frame_top_cript,width=40,height=8)           #WIDGET DA CAIXA DE TEXTO COM SCROLL
-btn5 = Button(frame_bottom_cript, text="Criptografar", command = encript)       #BOTÃO CRIPTOGRAFAR
-scroll.pack(side = BOTTOM, padx=10, pady = 7)                                   #EMPACOTAMENTO DA CAIXA E TEXTO
-btn5.pack(side=BOTTOM, padx=10, pady = 2)                                       #EMPACOTAMENTO DO BOTÃO CRIPTOGRAFAR
-frame_top_cript.pack(side = TOP, expand = 1)                                    #EMPACOTAMENTO DO FRAME SUPERIOR
-frame_bottom_cript.pack(side = BOTTOM, expand = 1)                              #EMPACOTAMENTO DO FRAME INFERIOR
-lb3 = Label(frame_top_cript, text = "Sua mensagem já foi criptografada e o\narquivo encripted.txt foi gerado no diretório onde\nestá este executável")  #LABEL INFORMATIVA
+scroll = scrolledtext.ScrolledText(frame_top_cript,width = 40, height = 8)           #WIDGET DA CAIXA DE TEXTO COM SCROLL
+btn5 = Button(frame_bottom_cript, text="Criptografar", command = encrypt)            #BOTÃO CRIPTOGRAFAR
+scroll.pack(side = BOTTOM, padx = 10, pady = 7)                                      #EMPACOTAMENTO DA CAIXA E TEXTO
+btn5.pack(side = BOTTOM, padx = 10, pady = 2)                                        #EMPACOTAMENTO DO BOTÃO CRIPTOGRAFAR
+frame_top_cript.pack(side = TOP, expand = 1)                                         #EMPACOTAMENTO DO FRAME SUPERIOR
+frame_bottom_cript.pack(side = BOTTOM, expand = 1)                                   #EMPACOTAMENTO DO FRAME INFERIOR
+lb3 = Label(frame_top_cript, text = "Sua mensagem já foi criptografada e o\narquivo encrypted.txt foi gerado no diretório onde\nestá este executável")  #LABEL INFORMATIVA
 
 ## ABA DESCRIPTOGRAFAR
 # FRAMES E WIDGETS
@@ -382,8 +402,8 @@ lb4.pack(side = TOP, pady = 5)        #EMPACOTAMENTO DA LABEL DE INSTRUÇÃO
 e3.pack(side = TOP, pady = 20)        #EMPACOTAMENTO DA ENTRADA DE 'E'
 e4.pack(side = TOP, pady = 20)        #EMPACOTAMENTO DA ENTRADA DE 'P'
 e5.pack(side = TOP, pady = 20)        #EMPACOTAMENTO DA ENTRADA DE 'Q'
-lb6 = Label(frame_dcript, text = "Seu arquivo foi descriptografado e está no diretório\ndeste executável como decripted.txt") #LABEL INFORMATIVA DE QUE O ARQUIVO FOI GERADO
-btn7 = Button(frame_dcript, text="Descriptografar", command = decript)  #BOTÃO PARA DESCRIPTOGRAFAR O ARQUIVO
+lb6 = Label(frame_dcript, text = "Seu arquivo foi descriptografado e está no diretório\ndeste executável como decrypted.txt") #LABEL INFORMATIVA DE QUE O ARQUIVO FOI GERADO
+btn7 = Button(frame_dcript, text="Descriptografar", command = decrypt)  #BOTÃO PARA DESCRIPTOGRAFAR O ARQUIVO
 btn7.pack(side = BOTTOM, pady = 10)   #EMPACOTAMENTO DO BOTÃO DESCRIPTOGRAFAR
 frame_dcript.pack()                   #EMPACOTAMENTO DO FRAME PRINCIPAL DA ABA
 
