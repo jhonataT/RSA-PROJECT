@@ -15,8 +15,6 @@ Tópicos deste projeto:
    * [Sobre o projeto](#sobre-projeto)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
-   * [Tests](#testes)
-   * [Tecnologias](#tecnologias)
 <!--te-->
 
 <a href="#sobre-projeto"> 
