@@ -61,7 +61,7 @@ Tópicos deste projeto:
 <!--ts-->
    * [Gerar chaves](#Gerando-chaves)
    * [Encriptar](#encriptando)
-   * [Desencriptar](#decriptando)
+   * [Desencriptar](#desencriptando)
 <!--te-->
 
 <br/>
