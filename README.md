@@ -59,15 +59,15 @@ Tópicos deste projeto:
 </a>
 
 <!--ts-->
-   * [Gerar chaves](#gerar-chaves)
+   * [Gerar chaves](#gerando-chaves)
    * [Encriptar](#encriptando)
-   * [Desencriptar](#decrypt)
+   * [Desencriptar](#decriptando)
 <!--te-->
 
 <br/>
 
-<a href="#gerar-chaves">
-  <p><strong>Gerar chaves:</strong></p>
+<a href="#gerando-chaves">
+  <p><strong>Gerando chaves:</strong></p>
   <img src="https://user-images.githubusercontent.com/51134324/102367172-357e9880-3f98-11eb-9000-4ffd81355472.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102369641-ef770400-3f9a-11eb-9e87-f629c44059f1.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102369161-652ea000-3f9a-11eb-972f-32c2978886bc.PNG" />
@@ -76,7 +76,7 @@ Tópicos deste projeto:
 <br/>
 
 <a href="#encriptando">
-  <p><strong>Encriptando:</strong></p>
+  <p><strong>Encriptando a mensagem:</strong></p>
   <img src="https://user-images.githubusercontent.com/51134324/102371188-afb11c00-3f9c-11eb-9933-b689f0b57bc8.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102371458-f868d500-3f9c-11eb-8d49-4493f2ba7256.PNG" />
   <img src="https://user-images.githubusercontent.com/51134324/102370945-6eb90780-3f9c-11eb-949f-ba55df902502.PNG" />
