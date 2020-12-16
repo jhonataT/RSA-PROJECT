@@ -12,13 +12,12 @@
 Tópicos deste projeto:
 =================
 <!--ts-->
-   * [Sobre o projeto](#sobre)
+   * [Sobre o projeto](#Sobre)
    * [Instalação](#instalando)
    * [Como usar](#como-usar)
 <!--te-->
 
-
-<a href="#sobre"> 
+<a href="#como-usar"> 
   <h1>Sobre este projeto:</h1>
   <p><strong>Alunos: Jhonata Tenório e Jorge Lucas.</strong></p>
   <p>Projeto de Criptografia RSA para a nota final da disciplina de Matemárica Discreta, Universidade Federal de Alagoas.</p>
@@ -32,9 +31,12 @@ Tópicos deste projeto:
 
 <a href="#instalando">
   <h1>Como instalar:</h1>
+  <p> 
+    <strong>Instale o <a href="https://git-scm.com/downloads">GIT</a>  e o <a href="https://www.python.org/downloads/">PYTHON3.</a></strong> 
+  </p>
 </a>
 
-<a href="#como-usar">
+<a href="#Sobre">
   <h1>Como usar:</h1>
   <p><strong>Esolha entre três opções:</strong></p>
 </a>
