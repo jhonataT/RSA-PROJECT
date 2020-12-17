@@ -214,5 +214,6 @@ def decrypt():
       <p>IV. Separamos cada letra da mensagem em uma lista;</p>
       <p>V. Convertemos o expoente 'd' em binário para poder iniciar a exponenciação;</p>
       <p>VI. Armazenamos em uma lista a decomposição do expoente em potências de base 2;</p>
-      <p>VII. E, por último, executamos a exponênciacao modular rápida com o expoente 'd'.</p>
+      <p>VII. Executamos a exponenciação modular rápida com o expoente 'd', para resolver [T = C^d (mod  n)], onde T é o caractere original, C é o caractere criptografado, 'd' é o inverso multiplicativo de 'e' e 'n' é fornecido pelo usuário.</p>
+      <p>VIII. Depois de resolvido o inverso multiplicativo, resolve-se a exponenciação modular rápida e conseguimos retornar para o valor original T, que está relacioando no dicionário (dic2), então escrevemos no arquivo decrypted.txt cada caractere, formando a frase originalmente criptografada.</p>
  </strong></p>
