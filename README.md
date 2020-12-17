@@ -160,7 +160,10 @@ def encrypt():
 <p><strong>
     ➥ Para encriptar a mensagem, usamos a função 'encrypt()' com o seguinte algoritmo:
       <p>I. Recebemos 'n', 'e' e a 'mensagem' do usuário, convertendo o conteúdo da 'mensagem' para minúsculo;</p>
-      <p>II. Usando a chave pública do destinatário 'n' e 'e' fazemos uma potenciação modular: m^e ≡ c (mod n).</p>
+      <p>II. Percorremos cada caractere da 'mensagem' e relacionamos o caractere com inteiro correspondente no dicionário (dic1);</p>
+      <p>III. Convertemos o valor de 'e' para binário e decompomos em base 2, salvando em cada posição de uma lista ('list_int_pow') o valor convertido em inteiro do bit atual;</p>
+      <p>IV. Usando 'n' e 'e', da  chave pública, faremos a exponenciação modular rápida dos valores da lista ('list_int_pow') para resolver [C = T^e (mod n)], onde: C é o caractere criptografado, 'T' é o valor do caratere relacioando no dicionário, 'e' e 'n' são fornecidos pelo usuário. Dessa forma, cada letra da mensagem será criptografada.</p>
+      <p>V. Escrevemos o valor resultante de cada letra, concatenado com espaço " ", no arquivo encrypted.txt</p>
  </strong></p>
  
  <br/>
